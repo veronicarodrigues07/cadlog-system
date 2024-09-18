@@ -10,7 +10,16 @@ class Database{
             $db = 'sistema_usuarios';
             $user = 'root';
             $password = '';
+  //A conexão usa  dribe Mysql (myslq::) e as informações de host e BD 
+            self :: $instance =  new PDO("myslq:host=$host; dbname=$db", $user, $password); 
+
+            //Define o modo de ero para execeções,facilitando a depuração e tratamento dos erros
+            self:: $instance->setAttribute(PDO:: ATTR_ERRMODE, DPO::ERRMODE_EXCEPTION);
+            
+
+
         }
+        return self:: $instance;
     }
 }
 ?>
