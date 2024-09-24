@@ -19,6 +19,22 @@
 
 
         }
+        static public function find($id){
+            $conn = Database::getConecction();
+            $stmt = $conn ->prepare("SELECT * FROM usuario WHERE id = :id");
+            $stmt ->execute(['id'=>$id]);
+            return $stmt -> fetch(PDO::FETCH_ASSOC);
+        }
 
+
+        //FUNÇÃO PARA CRIAR UM NOVO USUÁRIO NO BANCO DE DADOS
+
+
+        static public function create($data){
+            $conn = Database::getConnection ();
+            $stmt = $conn ->prepare("INSERT INTRO usuarios(nome, email, senha , perfil) VALUES (:nome, :email, :senha, :perfil )");
+            $stmt ->execute($data);
+            
+        }
     } 
 ?>
