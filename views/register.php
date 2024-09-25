@@ -9,7 +9,7 @@
 <body>
     <div>
         <h2> Cadstro de usuário</h2>
-        <form action="" method="post">
+        <form action="index.php?action = register" method="post">
             <label for="nome"></label>
             <input type="text" name="nome" id= "nome" required>
 

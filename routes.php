@@ -7,4 +7,20 @@ require 'controllers/DashboardController.php'; // Instancia controlador dashboar
 $authController = new AuthController();
 $userController = new UserController();
 $dashboardController = new DashboardController();
+//$dashboardcontroller = new DashboardController();
+
+//coleta a ação da URL, se não houver ação definida, usa 'login' como padrão
+$action = $_GET['action']?? 'login'; //Usa operador de coalescencia nula (??) para definir 'login' se 'action' não estiver presente 
+
+switch ($action){
+    case 'login':
+        $authController ->login();
+        break;
+        default:
+        $authController ->login();
+        break;
+        default:
+        $authController->login();
+        break;
+}
 ?>

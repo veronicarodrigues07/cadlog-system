@@ -1,21 +1,20 @@
 <?php
     class UserController
     {
-        public function tegister(){
-            if($_SERVER['REQUEST_METHOD'== 'POST']){
+        public function register(){
+            if($_SERVER['REQUEST_METHOD'] == 'POST'){
                 $data = [
-                    'nome'=> $_POST['nome'],
-                    'email '=> $_POST['email'];
-                    'senha' => passoword_hans($_POST ['senha'], PASSWORD_DEFAULT)
-                    'perfil' => $_POST ['perfil']
-    
+                    'nome' => $_POST['nome'],
+                    'email' => $_POST['email'], 
+                    'senha' => password_hash($_POST['senha'], PASSWORD_DEFAULT), 
+                    'perfil' => $_POST['perfil']
                 ];
+                
                 User::create($data);
                 header('Location: index.php');
-            }else{
-                include'view/register.php;
-            
-            
+            } else {
+                include 'view/register.php'; 
+            }
         }
     }
 ?>
