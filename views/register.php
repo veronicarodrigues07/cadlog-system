@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Cadastre-se</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -17,7 +17,7 @@
             height: 100vh;
         }
 
-        main {
+        div {
             background-color: rgba(255, 255, 255, 0.9);
             padding: 30px;
             border-radius: 10px;
@@ -42,8 +42,10 @@
             margin-bottom: 5px;
         }
 
+        input[type="text"],
         input[type="email"],
-        input[type="password"] {
+        input[type="password"],
+        select {
             padding: 10px;
             border: 1px solid #ccc;
             border-radius: 4px;
@@ -52,14 +54,14 @@
             transition: border-color 0.3s;
         }
 
-        input[type="email"]:focus,
-        input[type="password"]:focus {
+        input:focus,
+        select:focus {
             border-color: #a1c4fd;
             outline: none;
         }
 
         button {
-            background-color: #a1c4fd;
+            background-color: #ff9a9e;
             color: white;
             padding: 10px;
             border: none;
@@ -70,14 +72,14 @@
         }
 
         button:hover {
-            background-color: #6495ed;
+            background-color: #ff6f91;
         }
 
         a {
             text-align: center;
             display: block;
             margin-top: 10px;
-            color: #ff9a9e;
+            color: #a1c4fd;
             text-decoration: none;
         }
 
@@ -87,18 +89,27 @@
     </style>
 </head>
 <body>
-    <main>
-        <h2>Login</h2>
-        <form action="" method="post">
+    <div>
+        <h2>Cadastro de Usuário</h2>
+        <form action="index.php?action=register" method="post">
+            <label for="nome">Nome</label>
+            <input type="text" name="nome" id="nome" required>
+
             <label for="email">Email</label>
             <input type="email" name="email" id="email" required>
 
             <label for="senha">Senha</label>
             <input type="password" name="senha" id="senha" required>
 
-            <button type="submit">Login</button>
+            <label for="Perfil">Perfil:</label>
+            <select name="Perfil" id="Perfil" required>
+                <option value="admin">Admin</option>
+                <option value="gestor">Gestor</option>
+                <option value="colaborador">Colaborador</option>
+            </select>
+            <button type="submit">Cadastrar</button>
         </form>
-        <a href="register.html">Cadastre-se</a>
-    </main>
+        <a href="login.html">Voltar ao Login</a>
+    </div>
 </body>
 </html>
