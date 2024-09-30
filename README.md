@@ -1,6 +1,4 @@
 # cadlog-system
-# cadlog-system
-# Sistema de Login
 
 ## Descrição
 Este é um projeto simples de **login de usuário**, desenvolvido em HTML e CSS. Ele faz parte de um sistema de cadastro de usuário que terá diferentes perfis (Admin, Gestor, Colaborador), mas no momento contém apenas a tela de login.
