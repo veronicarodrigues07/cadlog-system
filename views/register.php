@@ -6,15 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastre-se</title>
     <style>
+        /* Estilização básica */
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(to right, #ff9a9e, #a1c4fd);
+            background: linear-gradient(to right, #ff9a9e, #a1c4fd); /* Gradiente rosa e azul */
             margin: 0;
             padding: 0;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
+            color: #fff;
         }
 
         div {
@@ -28,7 +30,7 @@
         h2 {
             text-align: center;
             margin-bottom: 20px;
-            color: #ff9a9e;
+            color: #ff9a9e; /* Título rosa */
         }
 
         form {
@@ -50,18 +52,21 @@
             border: 1px solid #ccc;
             border-radius: 4px;
             width: 100%;
+            box-sizing: border-box;
             margin-bottom: 15px;
             transition: border-color 0.3s;
         }
 
-        input:focus,
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="password"]:focus,
         select:focus {
-            border-color: #a1c4fd;
+            border-color: #a1c4fd; /* Foco azul */
             outline: none;
         }
 
         button {
-            background-color: #ff9a9e;
+            background-color: #ff9a9e; /* Botão rosa */
             color: white;
             padding: 10px;
             border: none;
@@ -72,15 +77,16 @@
         }
 
         button:hover {
-            background-color: #ff6f91;
+            background-color: #ff6f91; /* Hover rosa mais escuro */
         }
 
         a {
             text-align: center;
             display: block;
             margin-top: 10px;
-            color: #a1c4fd;
+            color: #a1c4fd; /* Link azul */
             text-decoration: none;
+            font-size: 14px;
         }
 
         a:hover {
@@ -109,7 +115,7 @@
             </select>
             <button type="submit">Cadastrar</button>
         </form>
-        <a href="login.html">Voltar ao Login</a>
+        <a href="index.html">Voltar ao Login</a>
     </div>
 </body>
 </html>
